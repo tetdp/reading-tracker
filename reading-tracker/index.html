@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reading Tracker App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📚 Reading Tracker</h1>
+      <button id="dark-mode-toggle">🌙</button>
+    </header>
+
+    <form id="book-form">
+      <input type="text" id="title" placeholder="Book Title" required />
+      <input type="text" id="author" placeholder="Author (optional)" />
+      <input type="url" id="cover" placeholder="Cover Image URL (optional)" />
+      <select id="status" required>
+        <option value="To Read">To Read</option>
+        <option value="Reading">Reading</option>
+        <option value="Finished">Finished</option>
+      </select>
+      <button type="submit">Add Book</button>
+    </form>
+
+    <div class="filters">
+      <button data-filter="All">All</button>
+      <button data-filter="To Read">To Read</button>
+      <button data-filter="Reading">Reading</button>
+      <button data-filter="Finished">Finished</button>
+    </div>
+
+    <div class="progress-bar-wrapper">
+      <span>Progress</span>
+      <div class="progress-bar-bg">
+        <div id="progress-bar-fill"></div>
+      </div>
+    </div>
+
+    <button id="export-btn">📤 Export to CSV</button>
+
+    <ul id="book-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
